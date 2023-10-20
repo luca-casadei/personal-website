@@ -3,7 +3,7 @@ import NavBar from "./components/NavBar";
 
 export default function Root(){
     return(
-        <main>
+        <main className="h-full">
             <NavBar/>
             <Outlet/>
         </main>
