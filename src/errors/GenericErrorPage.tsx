@@ -1,4 +1,5 @@
-import { useRouteError } from "react-router-dom"
+import { isRouteErrorResponse, useRouteError } from "react-router-dom"
+import ErrorTextDisplayer from "./ErrorTextDisplayer";
 
 
 export default function GenericErrorPage(){
@@ -6,9 +7,14 @@ export default function GenericErrorPage(){
     const error = useRouteError();
     console.log(error);
 
-    return(
-        <p>
-            Si è verificato un errore non gestito.
-        </p>
-    )
+    if(isRouteErrorResponse(error)){
+        return(
+            <ErrorTextDisplayer statusCode={error.status} statusText={error.statusText}/>
+        )
+    }
+    else{
+        return(
+            <ErrorTextDisplayer statusCode={520} statusText={"Errore generico o sconosciuto"}/>
+        )
+    }
 }
