@@ -1,3 +1,7 @@
 export default function Home() {
-  return <p>Aiuto!</p>;
+  return (
+    <p id="homePage" className="bg-black m-6">
+
+    </p>
+  )
 }

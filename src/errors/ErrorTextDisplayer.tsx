@@ -3,17 +3,17 @@ type ErrorDisplayer = {
     statusText: string
 }
 
-export default function ErrorTextDisplayer({statusCode, statusText}: ErrorDisplayer){
+export default function ErrorTextDisplayer({ statusCode, statusText }: ErrorDisplayer) {
     let detailedDescription: string = "";
-    
-    switch(statusCode){
-        case 404:{
+
+    switch (statusCode) {
+        case 404: {
             detailedDescription = "La pagina non è stata trovata, controllare eventuali errori nell'indirizzo inserito";
             break;
         }
     }
-    
-    return(
+
+    return (
         <p id="error-displayer" className="flex flex-col items-center">
             <div>Spiacente, la richiesta non può essere soddisfatta</div>
             <div>Descrizione errore: {statusText}</div>
