@@ -5,7 +5,7 @@ export default function NavBar() {
   return (
     <nav
       id="navbar"
-      className="text-white p-3 w-full bg-gradient-to-r from-amber-300 to-amber-600"
+      className="fixed text-white p-3 w-full bg-gradient-to-r from-amber-300 to-amber-600"
     >
       <div className="flex sm:flex-row flex-col ml-3">
         <NavLink to={"/home"} className="p-2 rounded-lg">

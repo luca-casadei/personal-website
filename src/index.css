@@ -29,3 +29,12 @@ body{
     background-color: #000022;
     --tw-bg-opacity: 1;
 }
+
+/*Custom sizes*/
+.max-w-xxs{
+    max-width: 12rem;
+}
+
+.max-h-xxs{
+    max-height: 12rem;
+}

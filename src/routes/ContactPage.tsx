@@ -3,7 +3,7 @@ export default function Contatti() {
     event.preventDefault();
   };
   return (
-    <section id="contactPage" className="flex flex-col items-center">
+    <section id="contactPage" className="flex flex-col items-center h-full justify-center">
       <form
         onSubmit={handleEmailSubmit}
         className="flex flex-col w-full items-center md:mt-20 rounded-lg p-10 bg-amber-200 lg:w-4/5"
