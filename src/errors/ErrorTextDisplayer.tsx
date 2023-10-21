@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 type ErrorDisplayer = {
   statusCode: number;
   statusText: string;
@@ -18,11 +20,15 @@ export default function ErrorTextDisplayer({
   }
 
   return (
-    <p id="error-displayer" className="flex flex-col items-center">
+    <section
+      id="error-displayer"
+      className="flex flex-col h-full justify-center items-center bg-oxford-blue text-white"
+    >
       <div>Spiacente, la richiesta non può essere soddisfatta</div>
-      <div>Descrizione errore: {statusText}</div>
+      <h1 className="m-10 text-amber-400 text-5xl">{statusCode}</h1>
+      <div>Descrizione errore: "<span className="text-amber-400">{statusText}</span>" </div>
       <div>{detailedDescription}</div>
-      <div>Codice errore: {statusCode}</div>
-    </p>
+      <Link className="mt-20 bg-amber-400 p-3 hover:bg-amber-500 rounded-lg" to={"/home"}>Torna alla home</Link>
+    </section>
   );
 }
