@@ -2,11 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+/*Custom Fonts*/
 @font-face {
     font-family: poppins;
     src: url("./fonts/Poppins.ttf");
 }
 
+/*Global configs*/
 @layer base{
     html{
         font-family:poppins;
@@ -20,4 +22,10 @@ div#root{
 
 body{
     height: 100vh;
+}
+
+/*Custom colors*/
+.bg-oxford-blue{
+    background-color: #000022;
+    --tw-bg-opacity: 1;
 }

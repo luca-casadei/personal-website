@@ -1,7 +1,3 @@
 export default function ProjectPage() {
-    return (
-        <p id="projectPage">
-            
-        </p>
-    )
+  return <section id="projectPage"></section>;
 }
