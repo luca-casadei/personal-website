@@ -5,14 +5,16 @@ export default function NavBar() {
   return (
     <nav
       id="navbar"
-      className="fixed text-white p-3 w-full bg-gradient-to-r from-amber-300 to-amber-600"
+      className="fixed text-white 
+      p-3 w-full bg-gradient-to-r 
+      from-amber-300 to-amber-600"
     >
-      <div className="flex sm:flex-row flex-col ml-3">
+      <div className="flex flex-row ml-3 justify-start">
         <NavLink to={"/home"} className="p-2 rounded-lg">
           Home
         </NavLink>
         <NavLink to={"/contatti"} className={"p-2 rounded-lg sm:ml-3"}>
-          Contatti
+          Contattami
         </NavLink>
         <NavLink to={"/progetti"} className={"p-2 rounded-lg sm:ml-3"}>
           Progetti

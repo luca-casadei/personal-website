@@ -1,11 +1,13 @@
 import { Outlet } from "react-router-dom";
 import NavBar from "./components/NavBar";
+import Footer from "./components/Footer";
 
 export default function Root() {
   return (
-    <main className="h-full min-w-full overflow-hidden bg-oxford-blue">
+    <main className="overflow-x-hidden">
       <NavBar />
       <Outlet />
+      <Footer />
     </main>
   );
 }
