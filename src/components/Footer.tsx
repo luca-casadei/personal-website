@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="text-white bg-gradient-to-l from-amber-500 to-red-500 mt-20 py-4">
+    <footer className="text-white bg-gradient-to-l from-amber-500 to-red-500 py-4 sticky top-[100vh]">
       <div className="container w-[90%] mx-auto flex items-center justify-between">
         <div className="w-fit">Luca Casadei</div>
         <div className="justify-end gap-x-8 items-center flex w-fit">

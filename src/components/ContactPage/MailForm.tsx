@@ -1,3 +1,5 @@
+import DirectMailer from "./DirectMailer";
+
 export default function MailForm() {
   const handleEmailSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -5,51 +7,51 @@ export default function MailForm() {
   return (
     <form
       onSubmit={handleEmailSubmit}
-      className="flex flex-col items-center rounded-lg p-10 bg-amber-200"
+      className="flex flex-col rounded-lg p-10 shadow-2xl gap-10"
       id="contactForm"
     >
-      <h1 className="mb-7 text-orange-500 font-bold md:text-lg sm:text-sm">
-        Inviami una mail attraverso il seguente modulo
+      <h1 className="text-lg text-orange-400">
+        Compila il seguente modulo per contattarmi direttamente
       </h1>
-      <div className="flex flex-col md:flex-row w-full">
-        <label htmlFor="emailField" className="w-1/5">
-          Email:
+      <div className="flex md:flex-row flex-col">
+        <label className="w-1/5" htmlFor="mailField">
+          <span className="text-red-600">*</span>Email:
         </label>
         <input
+          className="w-4/5 outline-0 border-b focus:border-orange-400"
           required
-          id="emailField"
-          className="grow rounded-md p-2 focus:outline-orange-400"
-          type="email"
-          placeholder="esempio@esempio.it"
+          type="mail"
+          id="mailField"
+          placeholder="esempio@esempio.com"
         />
       </div>
-      <div className="flex flex-col md:flex-row w-full mt-6">
+      <div className="flex md:flex-row flex-col">
         <label className="w-1/5" htmlFor="subjectField">
-          Oggetto:
+          <span className="text-red-600">*</span>Oggetto:
         </label>
         <input
-          className="grow rounded-md p-2 focus:outline-orange-400"
+          className="w-4/5 outline-0 border-b focus:border-orange-400"
           required
-          id="subjectField"
           type="text"
-          placeholder="Inserisci oggetto"
+          id="subjectField"
+          placeholder="Inserisci l'oggetto"
         />
       </div>
-      <div className="flex flex-col w-full mt-6 h-1/2">
-        <label htmlFor="contentField">Contenuto</label>
+      <div className="flex flex-col">
+        <label htmlFor="contentAreaField">
+          <span className="text-red-600">*</span>Contenuto:
+        </label>
         <textarea
-          id="contentField"
-          required
-          maxLength={500}
-          className="p-3 rounded-lg focus:outline-orange-400 max-h-24 h-24"
-          placeholder="Inserisci qui il contenuto"
+          className="max-h-24 p-3 outline-0 border focus:border-orange-400"
+          placeholder="Inserisci qui il contenuto della mail"
+          id="contentAreaField"
         />
       </div>
       <input
         type="submit"
-        className="bg-orange-400 text-white hover:bg-orange-500 p-2 mt-6 rounded-lg"
-        value={"Invia"}
+        className="text-white focus-within:bg-orange-300 bg-orange-400 w-1/5 place-self-center rounded-md py-1"
       />
+      <DirectMailer />
     </form>
   );
 }

@@ -5,8 +5,8 @@ export default function NavBar() {
   return (
     <nav
       id="navbar"
-      className="fixed text-white 
-      p-3 w-full bg-gradient-to-r 
+      className="text-white sticky top-0
+      py-3 w-full bg-gradient-to-r 
       from-amber-300 to-amber-600"
     >
       <div className="flex flex-row ml-3 justify-start">
