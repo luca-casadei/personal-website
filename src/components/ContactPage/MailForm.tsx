@@ -1,9 +1,26 @@
+import { useState } from "react";
 import DirectMailer from "./DirectMailer";
+import { sendEmail, MailOptions } from "../../utilities/Mailer";
 
 export default function MailForm() {
-  const handleEmailSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
+  const [name, setName] = useState("");
+  const [surname, setSurname] = useState("");
+  const [text, setText] = useState("");
+  const [subject, setSub] = useState("");
+  const [company, setCompany] = useState("");
+
+  const handleEmailSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    await event.preventDefault();
+    const mailOptions: MailOptions = {
+      name: name,
+      surname: surname,
+      text: text,
+      subject: subject,
+      company: company
+    };
+    await sendEmail(mailOptions);
   };
+
   return (
     <form
       onSubmit={handleEmailSubmit}
@@ -14,24 +31,63 @@ export default function MailForm() {
         Compila il seguente modulo per contattarmi direttamente
       </h1>
       <div className="flex md:flex-row flex-col">
-        <label className="w-1/5" htmlFor="mailField">
-          <span className="text-red-600">*</span>Email:
+        <label className="md:w-1/5" htmlFor="nameField">
+          <span className="text-red-600">*</span>Nome:
         </label>
         <input
-          className="w-4/5 outline-0 border-b focus:border-orange-400"
+          className="md:w-4/5 outline-0 border-b focus:border-orange-400"
           required
-          type="mail"
-          id="mailField"
-          placeholder="esempio@esempio.com"
+          onChange={(event) => {
+            const target: HTMLInputElement = event.target;
+            setName(target.value);
+          }}
+          type="text"
+          id="nameField"
+          placeholder="Inserisci il tuo nome qui"
         />
       </div>
       <div className="flex md:flex-row flex-col">
-        <label className="w-1/5" htmlFor="subjectField">
+        <label className="md:w-1/5" htmlFor="surnameField">
+          <span className="text-red-600">*</span>Cognome:
+        </label>
+        <input
+          className="md:w-4/5 outline-0 border-b focus:border-orange-400"
+          required
+          onChange={(event) => {
+            const target: HTMLInputElement = event.target;
+            setSurname(target.value);
+          }}
+          type="mail"
+          id="mailField"
+          placeholder="Inserisci qui il tuo cognome"
+        />
+      </div>
+      <div className="flex md:flex-row flex-col">
+        <label className="md:w-1/5" htmlFor="surnameField">
+          Azienda:
+        </label>
+        <input
+          className="md:w-4/5 outline-0 border-b focus:border-orange-400"
+          onChange={(event) => {
+            const target: HTMLInputElement = event.target;
+            setCompany(target.value);
+          }}
+          type="mail"
+          id="mailField"
+          placeholder="Inserisci qui il tuo cognome"
+        />
+      </div>
+      <div className="flex md:flex-row flex-col">
+        <label className="md:w-1/5" htmlFor="subjectField">
           <span className="text-red-600">*</span>Oggetto:
         </label>
         <input
-          className="w-4/5 outline-0 border-b focus:border-orange-400"
+          className="md:w-4/5 outline-0 border-b focus:border-orange-400"
           required
+          onChange={(event) => {
+            const target: HTMLInputElement = event.target;
+            setSub(target.value);
+          }}
           type="text"
           id="subjectField"
           placeholder="Inserisci l'oggetto"
@@ -42,6 +98,11 @@ export default function MailForm() {
           <span className="text-red-600">*</span>Contenuto:
         </label>
         <textarea
+          required
+          onChange={(event) => {
+            const target: HTMLTextAreaElement = event.target;
+            setText(target.value);
+          }}
           className="max-h-24 p-3 outline-0 border focus:border-orange-400"
           placeholder="Inserisci qui il contenuto della mail"
           id="contentAreaField"

@@ -1,3 +1,5 @@
 #navbar a.active{
-    background-color:orange;
+    text-decoration: underline;
+    text-decoration-line: overline;
+    text-decoration-style:double
 }

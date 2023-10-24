@@ -6,18 +6,18 @@ export default function NavBar() {
     <nav
       id="navbar"
       className="text-white sticky top-0
-      py-3 w-full bg-gradient-to-r 
+      py-3 w-full bg-gradient-to-l
       from-amber-300 to-amber-600"
     >
-      <div className="flex flex-row ml-3 justify-start">
-        <NavLink to={"/home"} className="p-2 rounded-lg">
-          Home
+      <div className="flex flex-row ml-3 justify-start gap-3">
+        <NavLink to={"/home"}>
+          HOME
         </NavLink>
-        <NavLink to={"/contatti"} className={"p-2 rounded-lg sm:ml-3"}>
-          Contattami
+        <NavLink to={"/contatti"} className={"sm:ml-3"}>
+          CONTATTAMI
         </NavLink>
-        <NavLink to={"/progetti"} className={"p-2 rounded-lg sm:ml-3"}>
-          Progetti
+        <NavLink to={"/progetti"} className={"sm:ml-3"}>
+          PROGETTI
         </NavLink>
       </div>
     </nav>
