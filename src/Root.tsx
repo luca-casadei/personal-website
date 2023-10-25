@@ -3,6 +3,7 @@ import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 import LoadingContext from "./utilities/LoadingContext";
 import { useState } from "react";
+import LoadingPage from "./errors/LoadingPage";
 
 export default function Root() {
   const [isLoading, setLoading] = useState(false);
@@ -13,7 +14,7 @@ export default function Root() {
     >
       <main className="flex flex-col overflow-x-hidden h-screen">
         {isLoading ? (
-          <div>Caricamento...</div>
+          <LoadingPage/>
         ) : (
           <>
             <NavBar />
