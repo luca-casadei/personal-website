@@ -30,6 +30,7 @@ export default function MailForm() {
       switch (res.status) {
         case 200: {
           loadingContext.setLoading(false);
+          loadingContext.loadingText = "Invio mail in corso...";
           break;
         }
       }

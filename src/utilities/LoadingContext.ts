@@ -1,13 +1,17 @@
 import {createContext} from "react"
 
 export type LoadingContext = {
-    setLoading: React.Dispatch<React.SetStateAction<boolean>>;
     isLoading: boolean;
+    loadingText: string;
+    setLoading: React.Dispatch<React.SetStateAction<boolean>>;
+    setLoadingText: React.Dispatch<React.SetStateAction<string>>;
 }
 
 const voidContext : LoadingContext = {
-    isLoading: false,
     setLoading: () =>{},
+    setLoadingText: () => {},
+    isLoading: false,
+    loadingText: ""
 }
 const Context = createContext(voidContext);
 
