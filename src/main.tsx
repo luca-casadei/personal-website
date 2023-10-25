@@ -1,11 +1,15 @@
 import ReactDOM from "react-dom/client";
+
+//Tailwind
 import "./index.css";
-import Root from "./Root";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import GenericErrorPage from "./errors/GenericErrorPage";
-import Home from "./routes/Home";
+
+//Routes
+import Root from "./Root";
 import ContactPage from "./routes/ContactPage";
 import ProjectPage from "./routes/ProjectPage";
+import GenericErrorPage from "./errors/GenericErrorPage";
+import Home from "./routes/Home";
 
 const router = createBrowserRouter([
   {

@@ -4,18 +4,18 @@ export type MailOptions = {
   company: string;
   text: string;
   subject: string;
+  email: string;
 };
 
-export async function sendEmail(options: MailOptions) {
-    console.log(options);
-    await fetch("https://personal-webiste-apis.azurewebsites.net/",{
+export async function sendEmail(options: MailOptions): Promise<Response> {
+    return await fetch("https://personal-website-apis.azurewebsites.net/send",{
         method: "POST",
         mode:"cors",
         headers:{
             "Content-Type":"application/json"
         },
-        body: JSON.stringify(options)
-    }).then((res) => {
-        console.log(res);
+        body: JSON.stringify(options),
+    }).then((res: Response) => {
+        return res;
     })
 }

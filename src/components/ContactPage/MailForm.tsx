@@ -1,24 +1,39 @@
 import { useState } from "react";
 import DirectMailer from "./DirectMailer";
 import { sendEmail, MailOptions } from "../../utilities/Mailer";
+import {useContext} from "react"
+import LoadingContext from "../../utilities/LoadingContext";
 
 export default function MailForm() {
+  //React state
   const [name, setName] = useState("");
   const [surname, setSurname] = useState("");
   const [text, setText] = useState("");
   const [subject, setSub] = useState("");
   const [company, setCompany] = useState("");
+  const [email, setEmail] = useState("");
+
+  const loadingContext = useContext(LoadingContext);
 
   const handleEmailSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    loadingContext.setLoading(true);
     await event.preventDefault();
     const mailOptions: MailOptions = {
       name: name,
       surname: surname,
       text: text,
       subject: subject,
-      company: company
+      company: company,
+      email: email,
     };
-    await sendEmail(mailOptions);
+    await sendEmail(mailOptions).then((res: Response) => {
+      switch (res.status) {
+        case 200: {
+          loadingContext.setLoading(false);
+          break;
+        }
+      }
+    });
   };
 
   return (
@@ -30,6 +45,22 @@ export default function MailForm() {
       <h1 className="text-lg text-orange-400">
         Compila il seguente modulo per contattarmi direttamente
       </h1>
+      <div className="flex md:flex-row flex-col">
+        <label className="md:w-1/5" htmlFor="mailField">
+          <span className="text-red-600">*</span>Email:
+        </label>
+        <input
+          className="md:w-4/5 outline-0 border-b focus:border-orange-400"
+          required
+          onChange={(event) => {
+            const target: HTMLInputElement = event.target;
+            setEmail(target.value);
+          }}
+          type="email"
+          id="mailField"
+          placeholder="esempio@esempio.it"
+        />
+      </div>
       <div className="flex md:flex-row flex-col">
         <label className="md:w-1/5" htmlFor="nameField">
           <span className="text-red-600">*</span>Nome:
@@ -46,6 +77,7 @@ export default function MailForm() {
           placeholder="Inserisci il tuo nome qui"
         />
       </div>
+
       <div className="flex md:flex-row flex-col">
         <label className="md:w-1/5" htmlFor="surnameField">
           <span className="text-red-600">*</span>Cognome:
@@ -57,13 +89,13 @@ export default function MailForm() {
             const target: HTMLInputElement = event.target;
             setSurname(target.value);
           }}
-          type="mail"
-          id="mailField"
+          type="text"
+          id="surnameField"
           placeholder="Inserisci qui il tuo cognome"
         />
       </div>
       <div className="flex md:flex-row flex-col">
-        <label className="md:w-1/5" htmlFor="surnameField">
+        <label className="md:w-1/5" htmlFor="companyField">
           Azienda:
         </label>
         <input
@@ -72,9 +104,9 @@ export default function MailForm() {
             const target: HTMLInputElement = event.target;
             setCompany(target.value);
           }}
-          type="mail"
-          id="mailField"
-          placeholder="Inserisci qui il tuo cognome"
+          type="text"
+          id="companyField"
+          placeholder="Inserisci qui un'eventuale azienda"
         />
       </div>
       <div className="flex md:flex-row flex-col">
