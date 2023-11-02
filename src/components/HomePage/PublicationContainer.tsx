@@ -6,7 +6,7 @@ export default function PublicationContainer() {
         title="Introduzione a Google Apps Script"
         imgSrc={"GoogleAppsScript.png"}
         description={
-          "Questa documentazione e codice sono stati realizzati in occasione del progetto \"Gestione Segnalazioni\" per il comune di Mercato Saraceno, non si tratta del codice del gestionale in sé ma di una documentazione da me redatta per gli studenti dell'istituto superiore Blaise Pascal di cesena, per aiutarli qualora fossero anch'essi "
+          "Questa documentazione e codice sono stati realizzati in occasione del progetto \"Gestione Segnalazioni\" per il comune di Mercato Saraceno, non si tratta del codice del gestionale in sé ma di una documentazione da me redatta per gli studenti dell'istituto superiore Blaise Pascal di cesena, per aiutarli qualora fossero anch'essi coinvoilti nel progetto."
         }
         link="https://drive.google.com/drive/folders/1l2stDUTmLVUQk2QYZnt6sNwoCTTouTKY?usp=sharing"
       />
