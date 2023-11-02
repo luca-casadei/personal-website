@@ -7,7 +7,7 @@ export default function NavBar() {
       id="navbar"
       className="text-white sticky top-0
       py-3 w-full bg-gradient-to-l
-      from-amber-300 to-amber-600"
+      from-red-500 to-amber-500"
     >
       <div className="flex flex-row ml-3 justify-start gap-3">
         <NavLink to={"/home"}>

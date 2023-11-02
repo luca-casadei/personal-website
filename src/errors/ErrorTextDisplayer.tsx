@@ -24,10 +24,10 @@ export default function ErrorTextDisplayer({
       id="error-displayer"
       className="flex flex-col h-full justify-center items-center bg-oxford-blue text-white"
     >
-      <div>Spiacente, la richiesta non può essere soddisfatta</div>
+      <div className="text-center">Spiacente, la richiesta non può essere soddisfatta</div>
       <h1 className="m-10 text-amber-400 text-5xl">{statusCode}</h1>
-      <div>Descrizione errore: "<span className="text-amber-400">{statusText}</span>" </div>
-      <div>{detailedDescription}</div>
+      <div className="text-center">Descrizione errore: "<span className="text-amber-400">{statusText}</span>" </div>
+      <div className="text-center">{detailedDescription}</div>
       <Link className="mt-20 bg-amber-400 p-3 hover:bg-amber-500 rounded-lg" to={"/home"}>Torna alla home</Link>
     </section>
   );
