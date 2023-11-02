@@ -18,7 +18,7 @@ export default function Publication({imgSrc, description, title, link} : Publica
                     {description}
                 </div>
             </div>
-            <a className="self-center text-orange-400" href={link}>
+            <a className="text-center text-orange-400" href={link}>
                 <span className="underline">Vai alla pubblicazione completa</span>
                 <span>📄</span>
             </a>
