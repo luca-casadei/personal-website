@@ -11,7 +11,7 @@ export default function DescriptionCard({
   description,
   imgToLeft,
 }: CardElements) {
-  const imagePath: string = "/src/assets/cardicons/";
+  const imagePath: string = "./cardicons/";
   return (
     <div
       className={

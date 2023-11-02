@@ -6,7 +6,7 @@ type PublicationDetails = {
 }
 
 export default function Publication({imgSrc, description, title, link} : PublicationDetails){
-    const imagesPath: string = "/src/assets/icons/";
+    const imagesPath: string = "./icons/";
     return(
         <section className="flex flex-col w-full gap-2 text-black bg-white shadow-xl rounded-lg p-5 md:pr-10">
             <h1 className="text-lg uppercase md:text-left text-center">{title}</h1>
