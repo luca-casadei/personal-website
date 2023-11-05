@@ -1,7 +1,7 @@
 import { useState } from "react";
 import DirectMailer from "./DirectMailer";
 import { sendEmail, MailOptions } from "../../utilities/Mailer";
-import {useContext} from "react"
+import { useContext } from "react"
 import LoadingContext from "../../utilities/LoadingContext";
 
 export default function MailForm() {
@@ -40,7 +40,7 @@ export default function MailForm() {
   return (
     <form
       onSubmit={handleEmailSubmit}
-      className="flex flex-col rounded-lg p-10 shadow-2xl gap-10"
+      className="flex flex-col overflow-y-scroll rounded-lg p-10 shadow-2xl bg-white gap-10 h-[90%]"
       id="contactForm"
     >
       <h1 className="text-lg text-orange-400">

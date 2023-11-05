@@ -4,40 +4,45 @@
 
 /*Custom Fonts*/
 @font-face {
-    font-family: poppins;
-    src: url("./fonts/Poppins.ttf");
+  font-family: poppins;
+  src: url("./fonts/Poppins.ttf");
 }
 
 /*Global configs*/
-@layer base{
-    html{
-        font-family:poppins;
-        font-size: large;
-    }
+@layer base {
+  html {
+    font-family: poppins;
+    font-size: large;
+  }
 }
 
-div#root{
-    height: 100%;
+div#root {
+  height: 100%;
 }
 
-body{
-    height: 100vh;
+body {
+  height: 100vh;
 }
 
 /*Custom colors*/
-.bg-oxford-blue{
-    background-color: #000022;
+.bg-oxford-blue {
+  background-color: #000022;
 }
 
-.text-oxford-blue{
-    color:#000022
+.text-oxford-blue {
+  --tw-text-opacity: 1;
+  color: #000022;
 }
 
 /*Custom sizes*/
-.max-w-xxs{
-    max-width: 12rem;
+.max-w-xxs {
+  max-width: 12rem;
 }
 
-.max-h-xxs{
-    max-height: 12rem;
+.max-h-xxs {
+  max-height: 12rem;
+}
+
+.h-11\/12 {
+  height: 91.666666%;
 }

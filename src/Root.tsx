@@ -16,11 +16,11 @@ export default function Root() {
 
   return (
     <LoadingContext.Provider
-      value={{isLoading:isLoading, loadingText:loadingText, setLoadingText:setLoadingText, setLoading:setLoading,}}
+      value={{ isLoading: isLoading, loadingText: loadingText, setLoadingText: setLoadingText, setLoading: setLoading, }}
     >
-      <main className="flex flex-col overflow-x-hidden h-screen">
+      <main className="flex flex-col overflow-x-hidden h-full">
         {isLoading ? (
-          <LoadingPage/>
+          <LoadingPage />
         ) : (
           <>
             <NavBar />
