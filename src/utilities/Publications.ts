@@ -40,7 +40,7 @@ export const publications: PublicationDetails[] = [
   {
     title: "Formulario di Matematica Discreta e Probabilità",
     imgSrc: "dices.png",
-    description:"Appunti sintetizzati scritti a mano di Matematica Discreta e Probabilità, con anche esercizi ed esempi vari.",
+    description:"Appunti sintetizzati scritti a mano di Matematica Discreta e Probabilità, con anche esercizi ed esempi vari. La possibilità di modifica è stata data a Francesco Pazzaglia e Alex Frisoni.",
     link: "https://1drv.ms/o/s!AvQzz15AoP-OlGdxMAXjj6R7Q50n?e=hZrsf0",
     category: PublicationCategory.UNIVERSITA
   }
