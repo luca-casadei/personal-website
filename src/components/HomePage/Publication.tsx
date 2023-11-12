@@ -8,7 +8,7 @@ export default function Publication(publicationDetails: PublicationDetails) {
                 <h1>{publicationDetails.title}</h1>
                 <h1 className="md:ml-auto">{publicationDetails.category}</h1>
             </div>
-            <div className="flex md:flex-row flex-col md:gap-10 gap-5 justify-center">
+            <div className="flex md:flex-row flex-col lg:gap-5 md:gap-10 gap-5 justify-center">
                 <div className="md:w-1/6 w-full flex flex-col justify-center items-center">
                     <img src={imagesPath + publicationDetails.imgSrc} width={150} height={150} alt="documentImage" />
                 </div>
