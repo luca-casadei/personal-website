@@ -7,14 +7,14 @@ export default function Home() {
       <DescriptionCard
         title="Chi sono"
         imageSource="lclogo.png"
-        description="Benvenuto sul mio sito personale, sono Luca Casadei, uno studente di
+        description="Benvenuto/a sul mio sito personale, sono Luca Casadei, uno studente di
     ingegneria e scienze informatiche del campus di Cesena dell'università
     di Bologna, ho creato questo sito per condividere pubblicamente alcuni
     dei miei progetti o applicativi, la maggior parte è open source ed il
     codice è consultabile liberamente, altri invece sono elencati
     unicamente a scopo informativo e quindi non condivisibili per motivi
     di riservatezza. Verranno caricati anche collegamenti a documenti da me
-    redatti in cui tratto concetti relativi alla programmazione o materie universitario."
+    redatti in cui tratto concetti relativi alla programmazione o materie universitarie."
         imgToLeft={true}
       />
       <DescriptionCard
