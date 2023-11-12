@@ -4,6 +4,7 @@ import NavBarContents from "./NavBarContents";
 
 export default function NavBar() {
   const [isMenuVisible, toggleMenuVisible] = useState(false);
+  const imagePath: string = "../../resources/navigation/"
 
   return (
     <nav
@@ -17,7 +18,7 @@ export default function NavBar() {
           <NavBarContents/>
         </div>
         <button type="button" className="ml-auto md:hidden visible" onClick={()=>{toggleMenuVisible(!isMenuVisible)}}>
-          <img className="max-h-6 max-w-6" src="./hamburger.svg" alt="menu" />
+          <img className="max-h-6 max-w-6" src={imagePath + "hamburger.svg"} alt="menu" />
         </button>
       </div>
       {

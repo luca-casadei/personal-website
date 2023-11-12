@@ -1,11 +1,10 @@
-import "./DescriptionCard.css"
+import "./Cards.css"
+import { NoImageCardElements } from "./NoImageDescriptionCard";
 
-type CardElements = {
-  title: string;
+interface CardElements extends NoImageCardElements {
   imageSource: string;
-  description: string;
   imgToLeft: boolean;
-};
+}
 
 export default function DescriptionCard({
   title,
@@ -13,7 +12,7 @@ export default function DescriptionCard({
   description,
   imgToLeft,
 }: CardElements) {
-  const imagePath: string = "./cardicons/";
+  const imagePath: string = "../resources/cardicons/";
   return (
     <div
       className={

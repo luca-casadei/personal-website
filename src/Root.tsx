@@ -4,7 +4,7 @@ import { useState } from "react";
 
 //Navbar and footer
 import NavBar from "./components/Navigation/NavBar";
-import Footer from "./components/Footer";
+import Footer from "./components/Navigation/Footer";
 
 //Loading
 import LoadingContext from "./utilities/LoadingContext";

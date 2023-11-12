@@ -12,6 +12,9 @@ export default function NavBarContents() {
             <NavLink to={"/progetti"}>
                 PROGETTI
             </NavLink>
+            <NavLink to={"/altro"}>
+                ALTRI CONTENUTI
+            </NavLink>
         </>
     )
 }

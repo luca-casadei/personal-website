@@ -10,6 +10,8 @@ import ContactPage from "./routes/ContactPage";
 import ProjectPage from "./routes/ProjectPage";
 import GenericErrorPage from "./errors/GenericErrorPage";
 import Home from "./routes/Home";
+import BlazonsPage from "./routes/BlazonsPage";
+import OthersPage from "./routes/OthersPage";
 
 const router = createBrowserRouter([
   {
@@ -17,10 +19,10 @@ const router = createBrowserRouter([
     element: <Root />,
     errorElement: <GenericErrorPage />,
     children: [
+      { index: true, element: <Home /> },
       {
         errorElement: <GenericErrorPage />,
         children: [
-          { index: true, element: <Home /> },
           {
             path: "/home",
             element: <Home />,
@@ -32,6 +34,14 @@ const router = createBrowserRouter([
           {
             path: "/progetti",
             element: <ProjectPage />,
+          },
+          {
+            path:"/altro",
+            element:<OthersPage/>,
+          },
+          {
+            path:"/altro/araldica",
+            element: <BlazonsPage/>
           },
         ],
       },
