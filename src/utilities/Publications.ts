@@ -16,7 +16,7 @@ export type PublicationDetails = {
 export const publications: PublicationDetails[] = [
   {
     title: "Introduzione a Google Apps Script",
-    imgSrc: "GoogleAppsScript.png",
+    imgSrc: "gas.png",
     description:
       "Questa documentazione e codice sono stati realizzati in occasione del progetto \"Gestione Segnalazioni\" per il comune di Mercato Saraceno, non si tratta del codice del gestionale in sé ma di una documentazione da me redatta per gli studenti dell'istituto superiore Blaise Pascal di cesena, per aiutarli qualora fossero anch'essi coinvoilti nel progetto.",
     link: "https://drive.google.com/drive/folders/1l2stDUTmLVUQk2QYZnt6sNwoCTTouTKY?usp=sharing",
@@ -32,7 +32,7 @@ export const publications: PublicationDetails[] = [
   },
   {
     title: "APIs di questo sito",
-    imgSrc: "Expressjs.png",
+    imgSrc: "express.png",
     description:
       "Il sorgente delle REST APIs per l'invio delle mail realizzate con Node.js e Express. Queste sono hostate attraverso la piattaforma Microsoft Azure.",
     link: "https://github.com/luca-casadei/personal-website-apis",

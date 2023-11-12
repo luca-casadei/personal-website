@@ -7,6 +7,7 @@ export default function PublicationContainer() {
   const categoryArray: string[] = Object.values(PublicationCategory);
   const [selectedCategory, setSelectedCategory] = useState("");
   const [searchTerm, setSearchTerm] = useState("");
+  const imagePath : string = "../resources/research/"
 
   async function setCategory(event: React.ChangeEvent<HTMLSelectElement>) {
     await setSelectedCategory(event.currentTarget.value);
@@ -21,7 +22,7 @@ export default function PublicationContainer() {
       <div className="flex md:flex-row flex-col w-full gap-3">
         <search className="flex flex-row gap-2">
           <input id="publicationSearchBar" onChange={setSearch} type="search" placeholder="Ricerca per testo" className="rounded-md text-oxford-blue text-center p-1" />
-          <img src="./search.svg" alt="searchIcon" width={35} height={35} />
+          <img src={imagePath + "search.svg"} alt="searchIcon" width={35} height={35} />
         </search>
         <select title="Categories" onChange={setCategory} name="category" className="md:ml-auto rounded-md text-oxford-blue p-1">
           <option value={"everything"}>Tutte</option>
@@ -47,7 +48,7 @@ export default function PublicationContainer() {
         }
         {
           !publicationFound ? <div className="text-center flex md:flex-row flex-col gap-3 items-center">
-            <img src="./searchnothing.png" className="w-10 h-10" alt="nothingFoundIcon" />
+            <img src={imagePath + "searchnothing.png"} className="w-10 h-10" alt="nothingFoundIcon" />
             <div className="justify-center flex flex-col">Nessuna pubblicazione trovata con l'attuale ricerca</div>
           </div> : <></>
         }

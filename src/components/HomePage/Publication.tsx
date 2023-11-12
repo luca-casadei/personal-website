@@ -1,7 +1,7 @@
 import { PublicationDetails } from "../../utilities/Publications";
 
 export default function Publication(publicationDetails: PublicationDetails) {
-    const imagesPath: string = "./icons/";
+    const imagesPath: string = "../resources/publications/";
     return (
         <section className="flex flex-col w-full gap-2 text-black bg-white shadow-xl rounded-lg p-5 md:pr-10">
             <div className="flex md:flex-row flex-col text-lg md:gap-10 uppercase md:text-justify text-center">
