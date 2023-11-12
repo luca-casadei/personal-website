@@ -7,22 +7,13 @@ export default function Home() {
       <DescriptionCard
         title="Chi sono"
         imageSource="lclogo.png"
-        description="Benvenuto/a sul mio sito personale, sono Luca Casadei, uno studente di
-    ingegneria e scienze informatiche del campus di Cesena dell'università
-    di Bologna, ho creato questo sito per condividere pubblicamente alcuni
-    dei miei progetti o applicativi, la maggior parte è open source ed il
-    codice è consultabile liberamente, altri invece sono elencati
-    unicamente a scopo informativo e quindi non condivisibili per motivi
-    di riservatezza. Verranno caricati anche collegamenti a documenti da me
-    redatti in cui tratto concetti relativi alla programmazione o materie universitarie."
+        description={"Benvenuto/a sul mio sito personale, sono Luca Casadei, uno studente del corso di laurea in 'Ingegneria e Scienze Informatiche' del campus di Cesena dell'università di Bologna.\nHo creato questo sito per condividere pubblicamente alcuni dei miei progetti o applicativi, la maggior parte è open source ed il codice è consultabile liberamente, altri invece sono elencati unicamente a scopo informativo e quindi non condivisibili per motivi di riservatezza.\nVerranno caricati anche collegamenti a documenti da me redatti in cui tratto concetti relativi alla programmazione o materie universitarie."}
         imgToLeft={true}
       />
       <DescriptionCard
         title="Pubblicazioni e documenti"
         imageSource="doc.svg"
-        description="Questa sezione è pensata per il caricamento di documenti e materiale da me redatto e
-      consultabile pubblicamente, a patto che non venga utilizzato a scopo commerciale o senza
-      gli adeguati crediti."
+        description="Questa sezione è pensata per il caricamento di documenti e materiale da me redatto e consultabile pubblicamente, tutto il materiale qui presente non può e non deve essere usato a scopo commerciale, o modificato senza citare la fonte originale del documento, se viene specificata una licenza per una pubblicazione in particolare, bisognerà attenersi alle condizioni della stessa, qualora invece essa non venga specificata, il materiale non può essere modificato o condiviso senza il mio permesso."
         imgToLeft={false}
       />
       <PublicationContainer />
