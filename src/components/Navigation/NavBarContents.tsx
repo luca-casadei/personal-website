@@ -1,0 +1,17 @@
+import { NavLink } from "react-router-dom";
+
+export default function NavBarContents() {
+    return (
+        <>
+            <NavLink to={"/home"}>
+                HOME
+            </NavLink>
+            <NavLink to={"/contatti"}>
+                CONTATTAMI
+            </NavLink>
+            <NavLink to={"/progetti"}>
+                PROGETTI
+            </NavLink>
+        </>
+    )
+}

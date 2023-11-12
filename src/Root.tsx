@@ -3,7 +3,7 @@ import { Outlet } from "react-router-dom";
 import { useState } from "react";
 
 //Navbar and footer
-import NavBar from "./components/NavBar";
+import NavBar from "./components/Navigation/NavBar";
 import Footer from "./components/Footer";
 
 //Loading
