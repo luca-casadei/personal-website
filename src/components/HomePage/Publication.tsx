@@ -4,11 +4,11 @@ export default function Publication(publicationDetails: PublicationDetails) {
     const imagesPath: string = "./icons/";
     return (
         <section className="flex flex-col w-full gap-2 text-black bg-white shadow-xl rounded-lg p-5 md:pr-10">
-            <div className="flex md:flex-row flex-col text-lg uppercase md:text-justify text-center">
+            <div className="flex md:flex-row flex-col text-lg md:gap-10 uppercase md:text-justify text-center">
                 <h1>{publicationDetails.title}</h1>
                 <h1 className="md:ml-auto">{publicationDetails.category}</h1>
             </div>
-            <div className="flex md:flex-row flex-col gap-2 justify-center">
+            <div className="flex md:flex-row flex-col md:gap-10 gap-5 justify-center">
                 <div className="md:w-1/6 w-full flex flex-col justify-center items-center">
                     <img src={imagesPath + publicationDetails.imgSrc} width={150} height={150} alt="documentImage" />
                 </div>
