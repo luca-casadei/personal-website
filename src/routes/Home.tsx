@@ -1,4 +1,5 @@
 import DescriptionCard from "../components/DescriptionCard";
+import GetCV from "../components/HomePage/GetCV";
 import PublicationContainer from "../components/HomePage/PublicationContainer";
 
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
         description={"Benvenuto/a sul mio sito personale, sono Luca Casadei, uno studente del corso di laurea in 'Ingegneria e Scienze Informatiche' del campus di Cesena dell'università di Bologna.\nHo creato questo sito per condividere pubblicamente alcuni dei miei progetti o applicativi, la maggior parte è open source ed il codice è consultabile liberamente, altri invece sono elencati unicamente a scopo informativo e quindi non condivisibili per motivi di riservatezza.\nVerranno caricati anche collegamenti a documenti da me redatti in cui tratto concetti relativi alla programmazione o materie universitarie."}
         imgToLeft={true}
       />
+      <GetCV/>
       <DescriptionCard
         title="Pubblicazioni e documenti"
         imageSource="doc.svg"

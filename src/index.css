@@ -34,6 +34,10 @@ body {
   color: #000022;
 }
 
+.border-oxford-blue{
+  border-color: #000022;
+}
+
 /*Custom sizes*/
 .max-w-xxs {
   max-width: 12rem;
