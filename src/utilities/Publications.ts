@@ -2,7 +2,7 @@ export enum PublicationCategory {
   REPOSITORY = "Repository",
   UNIVERSITA = "Appunti universitari",
   DOCUMENTAZIONE = "Documentazione",
-  NESSUNA = "N/A"
+  NESSUNA = "N/A",
 }
 
 export type PublicationDetails = {
@@ -44,6 +44,14 @@ export const publications: PublicationDetails[] = [
     description:
       "Appunti sintetizzati scritti a mano di Matematica Discreta e Probabilità, con anche esercizi ed esempi vari. La possibilità di modifica è stata data a Francesco Pazzaglia e Alex Frisoni.",
     link: "https://1drv.ms/o/s!AvQzz15AoP-OlGdxMAXjj6R7Q50n?e=hZrsf0",
+    category: PublicationCategory.UNIVERSITA,
+  },
+  {
+    title: "Appunti di Basi di Dati",
+    imgSrc: "database.png",
+    description:
+      "Appunti scritti in formato Tex delle lezioni di basi di dati, del corso di scienze ed ignegneria informatica del campus di Cesena.",
+    link: "https://github.com/luca-casadei/BasiDiDati",
     category: PublicationCategory.UNIVERSITA,
   },
 ];
