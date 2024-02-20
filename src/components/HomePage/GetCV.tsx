@@ -8,7 +8,7 @@ export default function GetCV() {
                     <div>Puoi scaricare l'ultima versione del curriculum cliccando sul bottone sottostante.</div>
                     <div>È un formato PDF con firma digitale, la data relativa all'ultima modifica è visualizzabile nel file in alto a destra.</div>
                 </div>
-                <a className="p-2 text-center hover:border-white border-oxford-blue border-solid border-2 self-center rounded-lg md:w-1/5 bg-gradient-to-bl hover:from-orange-400 hover:to-pink-500 from-amber-400 to-red-500" href="http://casadei.ddns.net:8080/getcv">Scarica</a>
+                <a className="p-2 text-center hover:border-white border-oxford-blue border-solid border-2 self-center rounded-lg md:w-1/5 bg-gradient-to-bl hover:from-orange-400 hover:to-pink-500 from-amber-400 to-red-500" href="https://casadei.ddns.net:8443/getcv">Scarica</a>
             </div>
         </section>
     )
