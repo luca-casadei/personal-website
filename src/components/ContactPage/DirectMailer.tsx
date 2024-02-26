@@ -4,12 +4,12 @@ export default function DirectMailer() {
       id="directMailer"
       className="flex md:flex-row flex-col rounded-md"
     >
-      <div>Oppure contattami con il tuo mailer cliccando su questo indirizzo: </div>
+      <p>Oppure contattami con il tuo mailer cliccando su questo indirizzo: </p>
       <a
         className="md:ml-5 md:mt-0 rounded-md text-orange-400"
-        href="mailto:luca@lucacasadei.net"
+        href="mailto:admin@lucacasadei.net"
       >
-        luca@lucacasadei.net
+        admin@lucacasadei.net
       </a>
     </div>
   );
