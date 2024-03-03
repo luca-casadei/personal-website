@@ -15,12 +15,12 @@ export default function ApiSection() {
 
     return (
         apiState ?
-            <section className="text-center flex flex-col gap-3">
+            <section className="text-center self-center flex flex-col gap-3 md:w-1/2 border border-dashed">
                 <p>Il server per lo scaricamento dei documenti è attualmente:</p>
                 <p className="text-green-600 text-2xl">ONLINE</p>
                 <p>Puoi usare tutte le funzionalità del sito.</p>
             </section> :
-            <section className="text-center flex flex-col gap-3">
+            <section className="text-center self-center flex flex-col gap-3 md:w-1/2 border p-5 border-dashed">
                 <p>Il server per lo scaricamento dei documenti è attualmente:</p>
                 <p className="text-red-600 text-2xl">OFFLINE</p>
                 <p>Non sarà possibile inviare una mail tramite il modulo presente in "Contatti" o scaricare il CV, per contattarmi si può una mail direttamente al mio indirizzo personale come alternativa.</p>
