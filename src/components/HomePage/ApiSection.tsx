@@ -15,7 +15,7 @@ export default function ApiSection() {
 
     return (
         apiState ?
-            <section className="text-center self-center flex flex-col gap-3 md:w-1/2 border border-dashed">
+            <section className="text-center self-center flex flex-col gap-3 md:w-1/2 border p-5 border-dashed">
                 <p>Il server per lo scaricamento dei documenti è attualmente:</p>
                 <p className="text-green-600 text-2xl">ONLINE</p>
                 <p>Puoi usare tutte le funzionalità del sito.</p>
