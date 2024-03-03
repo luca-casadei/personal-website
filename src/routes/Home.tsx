@@ -1,4 +1,5 @@
 import DescriptionCard from "../components/DescriptionCard";
+import ApiSection from "../components/HomePage/ApiSection";
 import GetCV from "../components/HomePage/GetCV";
 import PublicationContainer from "../components/HomePage/PublicationContainer";
 
@@ -7,10 +8,11 @@ export default function Home() {
     <section id="homePage" className="flex flex-col bg-oxford-blue text-white gap-16 md:p-20 p-5">
       <DescriptionCard
         title="Chi sono"
-        imageSource="lclogo.png"
+        imageSource="lclogo.webp"
         description={"Benvenuto/a sul mio sito personale, sono Luca Casadei, uno studente del corso di laurea in 'Ingegneria e Scienze Informatiche' del campus di Cesena dell'università di Bologna.\nHo creato questo sito per condividere pubblicamente alcuni dei miei progetti o applicativi, la maggior parte è open source ed il codice è consultabile liberamente, altri invece sono elencati unicamente a scopo informativo e quindi non condivisibili per motivi di riservatezza.\nVerranno caricati anche collegamenti a documenti da me redatti in cui tratto concetti relativi alla programmazione o materie universitarie."}
         imgToLeft={true}
       />
+      <ApiSection/>
       <GetCV/>
       <DescriptionCard
         title="Pubblicazioni e documenti"

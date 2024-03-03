@@ -57,8 +57,9 @@ export const publications: PublicationDetails[] = [
   {
     title: "Appunti di Fisica",
     imgSrc: "physics.png",
-    description: "Appunti scritti in formato Tex delle lezioni di fisica, del corso di scienze ed ignegneria informatica del campus di Cesena.",
+    description:
+      "Appunti scritti in formato Tex delle lezioni di fisica, del corso di scienze ed ignegneria informatica del campus di Cesena.",
     link: "https://github.com/luca-casadei/Fisica",
     category: PublicationCategory.UNIVERSITA,
-  }
+  },
 ];
