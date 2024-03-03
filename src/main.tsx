@@ -36,12 +36,12 @@ const router = createBrowserRouter([
             element: <ProjectPage />,
           },
           {
-            path:"/altro",
-            element:<OthersPage/>,
+            path: "/altro",
+            element: <OthersPage />,
           },
           {
-            path:"/altro/araldica",
-            element: <BlazonsPage/>
+            path: "/altro/araldica",
+            element: <BlazonsPage />
           },
         ],
       },
