@@ -7,7 +7,7 @@ export default function PublicationContainer() {
   const categoryArray: string[] = Object.values(PublicationCategory);
   const [selectedCategory, setSelectedCategory] = useState("");
   const [searchTerm, setSearchTerm] = useState("");
-  const imagePath : string = "../resources/research/"
+  const imagePath: string = "../resources/research/"
 
   async function setCategory(event: React.ChangeEvent<HTMLSelectElement>) {
     await setSelectedCategory(event.currentTarget.value);
@@ -21,7 +21,7 @@ export default function PublicationContainer() {
     <section className="flex flex-col bg-gradient-to-b rounded-lg from-orange-400 to-red-500 items-center gap-3 p-3 min-h-16">
       <div className="flex md:flex-row flex-col w-full gap-3">
         <search className="flex flex-row gap-2">
-          <input id="publicationSearchBar" onChange={setSearch} type="search" placeholder="Ricerca per testo" className="rounded-md text-oxford-blue text-center p-1" />
+          <input id="publicationSearchBar" onChange={setSearch} type="search" placeholder="Ricerca per testo" className="rounded-md text-oxford-blue text-center p-1 md:w-full w-5/6" />
           <img src={imagePath + "search.svg"} alt="searchIcon" width={35} height={35} />
         </search>
         <select title="Categories" onChange={setCategory} name="category" className="md:ml-auto rounded-md text-oxford-blue p-1">

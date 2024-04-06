@@ -6,12 +6,12 @@ export default function Footer() {
         <div className="mr-auto w-1/3">© 2023 Luca Casadei</div>
         <div className="w-2/3 gap-5 flex flex-row items-center justify-end">
           <a href="https://linkedin.com/in/casadeiluca">
-            <img src={imagePath + "linkedin.svg"} alt="in" className="max-h-8 max-w-8"/>
+            <img src={imagePath + "linkedin.svg"} alt="in" className="max-h-8 max-w-8" />
           </a>
           <a href="https://github.com/luca-casadei">
-            <img src={imagePath +"github.svg"} alt="gith" className="max-h-8 max-w-8" />
+            <img src={imagePath + "github.svg"} alt="gith" className="max-h-8 max-w-8" />
           </a>
-          <a href="mailto:casadeiluca30@gmail.com">
+          <a href="mailto:admin@lucacasadei.net">
             <img
               src={imagePath + "email.png"}
               alt="emailIcon"
