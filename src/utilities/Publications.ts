@@ -47,14 +47,6 @@ export const publications: PublicationDetails[] = [
     category: PublicationCategory.UNIVERSITA,
   },
   {
-    title: "Appunti di Basi di Dati",
-    imgSrc: "database.png",
-    description:
-      "Appunti scritti in formato Tex delle lezioni di basi di dati, del corso di scienze ed ignegneria informatica del campus di Cesena.",
-    link: "https://github.com/luca-casadei/BasiDiDati",
-    category: PublicationCategory.UNIVERSITA,
-  },
-  {
     title: "Appunti di Fisica",
     imgSrc: "physics.png",
     description:
