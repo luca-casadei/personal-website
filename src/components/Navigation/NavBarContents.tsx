@@ -6,9 +6,6 @@ export default function NavBarContents() {
             <NavLink to={"/home"}>
                 HOME
             </NavLink>
-            <NavLink to={"/contatti"}>
-                CONTATTAMI
-            </NavLink>
             <NavLink to={"/progetti"}>
                 PROGETTI
             </NavLink>

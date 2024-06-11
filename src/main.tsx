@@ -6,7 +6,6 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 //Routes
 import Root from "./Root";
-import ContactPage from "./routes/ContactPage";
 import ProjectPage from "./routes/ProjectPage";
 import GenericErrorPage from "./errors/GenericErrorPage";
 import Home from "./routes/Home";
@@ -26,10 +25,6 @@ const router = createBrowserRouter([
           {
             path: "/home",
             element: <Home />,
-          },
-          {
-            path: "/contatti",
-            element: <ContactPage />,
           },
           {
             path: "/progetti",

@@ -23,7 +23,8 @@ export default function ApiSection() {
             <section className="text-center self-center flex flex-col gap-3 md:w-1/2 border p-5 border-dashed">
                 <p>Il server per lo scaricamento dei documenti è attualmente:</p>
                 <p className="text-red-600 text-2xl">OFFLINE</p>
-                <p>Non sarà possibile inviare una mail tramite il modulo presente in "Contatti" o scaricare il CV, per contattarmi si può una mail direttamente al mio indirizzo personale come alternativa.</p>
+                <p>Non sarà scaricare il CV, per contattarmi si può una mail direttamente al mio indirizzo personale per richiederlo.</p>
+                <a className="text-amber-500" href="mailto:admin@lucacasadei.net">admin@lucacasadei.net</a>
             </section>
     )
 }
