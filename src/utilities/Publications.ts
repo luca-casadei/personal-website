@@ -37,21 +37,5 @@ export const publications: PublicationDetails[] = [
       "Il sorgente delle REST APIs per l'invio delle mail realizzate con Node.js e Express. Queste sono hostate attraverso la piattaforma Microsoft Azure.",
     link: "https://github.com/luca-casadei/personal-website-apis",
     category: PublicationCategory.REPOSITORY,
-  },
-  {
-    title: "Formulario di Matematica Discreta e Probabilità",
-    imgSrc: "dices.png",
-    description:
-      "Appunti sintetizzati scritti a mano di Matematica Discreta e Probabilità, con anche esercizi ed esempi vari. La possibilità di modifica è stata data a Francesco Pazzaglia e Alex Frisoni.",
-    link: "https://1drv.ms/o/s!AvQzz15AoP-OlGdxMAXjj6R7Q50n?e=hZrsf0",
-    category: PublicationCategory.UNIVERSITA,
-  },
-  {
-    title: "Appunti di Fisica",
-    imgSrc: "physics.png",
-    description:
-      "Appunti scritti in formato Tex delle lezioni di fisica, del corso di scienze ed ignegneria informatica del campus di Cesena.",
-    link: "https://github.com/luca-casadei/Fisica",
-    category: PublicationCategory.UNIVERSITA,
-  },
+  }
 ];
