@@ -3,7 +3,7 @@ import { useState } from "react";
 import NavBarContents from "./NavBarContents";
 
 export default function NavBar() {
-  const [isMenuVisible, toggleMenuVisible] = useState(false);
+  const [isMenuVisible, toggleMenuVisible] = useState(true);
   const imagePath: string = "../../resources/navigation/"
 
   return (
