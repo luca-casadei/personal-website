@@ -5,7 +5,7 @@ import BreadcrumbTrail from "./BreadcrumbTrail";
 
 export default function NavBar() {
   const [isMenuVisible, toggleMenuVisible] = useState(true);
-  const imagePath: string = "../../resources/navigation/"
+  const imagePath: string = "../../resources/navigation/";
 
   return (
     <nav
@@ -16,20 +16,32 @@ export default function NavBar() {
     >
       <div className="flex flex-row mx-5">
         <div className="md:flex gap-5 md:flex-row md:visible hidden">
-          <NavBarContents/>
+          <NavBarContents />
         </div>
-        <div className="flex flex-row ml-auto">
-          <button type="button" className="md:hidden visible" onClick={()=>{toggleMenuVisible(!isMenuVisible)}}>
-            <img className="max-h-6 max-w-6" src={imagePath + "hamburger.svg"} alt="menu" />
-          </button>
-          <BreadcrumbTrail/>
-        </div>        
+        <button
+          type="button"
+          className="md:hidden visible"
+          onClick={() => {
+            toggleMenuVisible(!isMenuVisible);
+          }}
+        >
+          <img
+            className="max-h-6 max-w-6"
+            src={imagePath + "hamburger.svg"}
+            alt="menu"
+          />
+        </button>
+        <div className="pl-3 ml-auto">
+          <BreadcrumbTrail />
+        </div>
       </div>
-      {
-        isMenuVisible ? <div className="flex flex-col gap-3 mx-5 md:hidden visible py-2">
-          <NavBarContents/>
-        </div> : <></>
-      }
+      {isMenuVisible ? (
+        <div className="flex flex-col gap-3 mx-5 md:hidden visible py-2">
+          <NavBarContents />
+        </div>
+      ) : (
+        <></>
+      )}
     </nav>
   );
 }
