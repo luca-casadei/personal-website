@@ -1,6 +1,7 @@
 import "./NavBar.css";
 import { useState } from "react";
 import NavBarContents from "./NavBarContents";
+import BreadcrumbTrail from "./BreadcrumbTrail";
 
 export default function NavBar() {
   const [isMenuVisible, toggleMenuVisible] = useState(true);
@@ -17,9 +18,12 @@ export default function NavBar() {
         <div className="md:flex gap-5 md:flex-row md:visible hidden">
           <NavBarContents/>
         </div>
-        <button type="button" className="ml-auto md:hidden visible" onClick={()=>{toggleMenuVisible(!isMenuVisible)}}>
-          <img className="max-h-6 max-w-6" src={imagePath + "hamburger.svg"} alt="menu" />
-        </button>
+        <div className="flex flex-row ml-auto">
+          <button type="button" className="md:hidden visible" onClick={()=>{toggleMenuVisible(!isMenuVisible)}}>
+            <img className="max-h-6 max-w-6" src={imagePath + "hamburger.svg"} alt="menu" />
+          </button>
+          <BreadcrumbTrail/>
+        </div>        
       </div>
       {
         isMenuVisible ? <div className="flex flex-col gap-3 mx-5 md:hidden visible py-2">
